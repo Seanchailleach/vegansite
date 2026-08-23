@@ -1,273 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Weather Witch — Old Ways, Modern Skies</title>
+  <meta charset="utf-8">
+  <title>Rooted Strength</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .nav-link { color: #2A2420; }
+    .post-link { color: #2A2420; text-decoration: none; border-bottom: 1px solid #DDD3C4; }
+    .post-link:hover { color: #BB5A38; border-bottom-color: #BB5A38; }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+    @media (max-width: 960px) {
+      .hero-row { flex-direction: column; padding-bottom: 56px !important; }
+    }
+
+    @media (max-width: 720px) {
+      .site-header { flex-direction: column; align-items: center !important; gap: 18px; }
+      .site-nav { flex-wrap: wrap; gap: 18px !important; justify-content: center !important; }
+      .hero-heading { font-size: 34px !important; }
+      .pillars-grid { grid-template-columns: 1fr !important; }
+      .footer-row { flex-direction: column; align-items: center !important; gap: 20px !important; }
+      .page-section, .site-header, .hero-row { padding-left: 28px !important; padding-right: 28px !important; }
+    }
+  </style>
 </head>
-
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="weather-witch.html"><span class="moon-mini">☽</span> The Weather Witch</a>
+<div style="background:#F6F1E9; color:#2A2420; font-family:'Archivo',-apple-system,BlinkMacSystemFont,sans-serif; width:100%; min-height:100%; text-align:center;">
 
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
-    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </label>
-
-    <nav class="site-nav" aria-label="Primary">
-      <a href="weather-witch.html" class="active" aria-current="page">Home</a>
-
-      <details class="nav-group">
-        <summary>Old Ways</summary>
-        <ul>
-          <li><a href="witchcraft.html">Why the "Weather Witch"?</a></li>
-          <li><a href="witchlinks.html">Weather Witchcraft Links</a></li>
-        </ul>
-      </details>
-
-      <details class="nav-group">
-        <summary>Modern Tech</summary>
-        <ul>
-          <li><a href="stations.html">Weather Stations</a></li>
-          <li><a href="share.html">Sharing Weather Data</a></li>
-          <li><a href="sciencelinks.html">Weather Links</a></li>
-          <li><a href="people.html">Storm Livestreams</a></li>
-          <li><a href="mysetup.html">My Setup</a></li>
-        </ul>
-      </details>
-
-      <details class="nav-group">
-        <summary>Resources</summary>
-        <ul>
-          <li><a href="safety.html">Safety Planning</a></li>
-          <li><a href="books.html">Books</a></li>
-          <li><a href="apps.html">Weather Apps</a></li>
-        </ul>
-      </details>
-    </nav>
+  <!-- HEADER -->
+  <div class="site-header" style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; padding:26px 64px; max-width:1200px; margin:0 auto;">
+    <div style="font-family:'Newsreader',Georgia,serif; font-style:italic; font-size:26px; font-weight:500; color:#2A2420;">Rooted Strength</div>
   </div>
-</header>
 
-<div class="stars hero">
-  <span class="moon" aria-hidden="true">☽</span>
-  <h1>The Weather Witch</h1>
-  <p class="tagline">Old ways and modern models, read side by side.</p>
+  <!-- HERO -->
+  <div class="hero-row" style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:64px; max-width:1200px; margin:0 auto; padding:48px 64px 80px;">
+    <div style="flex:1 1 0; display:flex; flex-direction:column; align-items:center; gap:22px; min-width:0;">
+      <div style="font-size:13px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8C6A46;">Vegan &middot; Strength Training &middot; No Age Limit</div>
+      <h1 class="hero-heading" style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:52px; line-height:1.12; margin:0; color:#2A2420;">Strong on plants.<br>Training for strength, <span style="font-style:italic;">not size.</span></h1>
+      <p style="font-size:18px; line-height:1.6; color:#5B5349; max-width:480px; margin:0 auto;">Recipes built to hit real protein targets, and programming for lifters returning to training later in life &mdash; joint-conscious, no hype, no shortcuts.</p>
+    </div>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div style="background:#EFE9DC; padding:48px 0;">
+    <div class="page-section" style="display:flex; flex-direction:column; align-items:center; gap:14px; max-width:760px; margin:0 auto; padding:0 64px;">
+      <h2 style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:28px; margin:0; color:#2A2420;">Disclaimer</h2>
+      <p style="font-size:16px; line-height:1.7; color:#4A4339; margin:0;">I am not a healthcare practitioner, dietician, or personal trainer. It's up to you to consult with your healthcare and/or training team before starting a new exercise routine, or making any changes to your current routine. And, to consult with your healthcare practitioner and/or dietician before making major changes to your diet. I will make it very clear when I am drawing on my personal experience vs. referencing sound medical information, and any medical information will be linked back to a peer-reviewed source or an actual trusted medical web site. Not from social media influencers or TikTok shorts.</p>
+    </div>
+  </div>
+
+  <!-- PURPOSE -->
+  <div style="background:#EFE9DC; padding:48px 0;">
+    <div class="page-section" style="display:flex; flex-direction:column; align-items:center; gap:14px; max-width:760px; margin:0 auto; padding:0 64px;">
+      <h2 style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:28px; margin:0; color:#2A2420;">Purpose</h2>
+      <p style="font-size:16px; line-height:1.7; color:#4A4339; margin:0;">&ldquo;Elderly vegan gym rat&rdquo; is somewhat of a small section of the population, but I'm very certain that I'm not the only one! Whether you are a vegan/plant-based eater, a lifter, or are getting on in years&mdash;or any combination of these&mdash;I hope you can take some inspiration from this page to further your health journey.</p>
+    </div>
+  </div>
+
+  <!-- ABOUT ME -->
+  <div style="background:#EFE9DC; padding:64px 0;">
+    <div class="page-section" style="display:flex; flex-direction:column; align-items:center; gap:14px; max-width:760px; margin:0 auto; padding:0 64px;">
+      <h2 style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:28px; margin:0; color:#2A2420;">About Me</h2>
+      <p style="font-size:16px; line-height:1.7; color:#4A4339; margin:0;">I'm Suzy, aka the Vegan Mimi. I've been lifting off and on since high school, and have been vegetarian since 1980, vegan since 2011. I'm getting back into working out after a couple of surgeries, and am navigating the reality of keeping fit as an elderly person while recuperating.</p>
+      <p style="font-size:16px; line-height:1.7; color:#4A4339; margin:0;">On a more personal note, I'm a proud mom of 2 beautiful daughters and Mimi to 3 beautiful granddaughters. I live in a tiny house in a tiny college town with my cat and two dogs. Being healthy so I can be around longer for my family is my north star.</p>
+    </div>
+  </div>
+
+  <!-- FROM THE JOURNAL -->
+  <div style="background:#EFE9DC; padding:72px 0;">
+    <div class="page-section" style="max-width:1200px; margin:0 auto; padding:0 64px; display:flex; flex-direction:column; align-items:center; gap:32px;">
+      <h2 style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:26px; margin:0; color:#2A2420;">From the Journal</h2>
+      <div class="pillars-grid" style="display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:40px; width:100%;">
+
+        <div style="display:flex; flex-direction:column; align-items:center; gap:16px; padding:36px; border:1px solid #DDD3C4; border-radius:10px; background:#F6F1E9;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B7A3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2c-4 4-8 8-8 13a8 8 0 0 0 16 0c0-5-4-9-8-13z"/>
+            <path d="M12 6v14"/>
+          </svg>
+          <h3 style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:22px; margin:0; color:#2A2420;">High-Protein, Fully Plant-Based</h3>
+          <p style="font-size:15px; line-height:1.6; color:#5B5349; margin:0;">Meals built around real training needs &mdash; quick enough for a weeknight, high enough in protein to actually matter.</p>
+          <a class="post-link" href="myeat.html" style="font-size:14px; padding-bottom:6px; width:fit-content; margin-top:8px;">Why I eat this way</a>
+          <a class="post-link" href="staples.html" style="font-size:14px; padding-bottom:6px; width:fit-content;">Staples that I keep on hand</a>
+        </div>
+
+        <div style="display:flex; flex-direction:column; align-items:center; gap:16px; padding:36px; border:1px solid #DDD3C4; border-radius:10px; background:#F6F1E9;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#BB5A38" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <rect x="1.2" y="9" width="2.8" height="6" rx="0.8"/>
+            <rect x="20" y="9" width="2.8" height="6" rx="0.8"/>
+            <rect x="5.8" y="7.2" width="2.3" height="9.6" rx="0.9"/>
+            <rect x="16" y="7.2" width="2.3" height="9.6" rx="0.9"/>
+          </svg>
+          <h3 style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:22px; margin:0; color:#2A2420;">Strength Training, No Age Limit</h3>
+          <p style="font-size:15px; line-height:1.6; color:#5B5349; margin:0;">Programming for lifters returning after time off, training for strength over size, with equipment choices that respect real joints.</p>
+          <div style="font-size:14px; font-style:italic; color:#8C6A46; margin-top:8px;">Links coming soon</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="page-section" style="padding:48px 64px;">
+    <div class="footer-row" style="max-width:1200px; margin:0 auto; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:24px; border-top:1px solid #DDD3C4; padding-top:32px;">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
+        <div style="font-family:'Newsreader',Georgia,serif; font-style:italic; font-size:19px; color:#2A2420;">Rooted Strength</div>
+        <div style="font-size:13px; color:#8C6A46;">Plant-based, joint-conscious, training for strength.</div>
+      </div>
+      <div style="font-size:13px; color:#8C6A46;">&copy; 2026 Rooted Strength</div>
+    </div>
+  </div>
+
 </div>
-
-<main>
-
-  <section>
-    <div class="intro-card">
-      <p>My intent for this site is to bring together the wisdom of the old ways and modern technology,
-      with emphasis on weather watching and forecasting. Why? Because <strong>I'm a weather nerd</strong>.
-      I'm as enthralled with radar and modern weather forecasting models as I am with reading the signs
-      of nature to predict the weather. I don't think it's an either/or — both is perfectly reasonable.</p>
-    </div>
-  </section>
-
-  <div class="moon-divider" aria-hidden="true">☽ ☾ ☽</div>
-
-  <section>
-    <h2>The Sky Over My Doorstep</h2>
-    <p class="section-sub">Live conditions, literally from my front yard.</p>
-    <div class="instrument-panel">
-      <iframe
-        title="Live local weather conditions"
-        src="https://ambientweather.net/devices/public/94dccbf470947054cfa5f0f863706b0d?embed=true">
-      </iframe>
-      <p class="instrument-credit">powered by <a target="_blank" rel="noopener" href="https://ambientweather.net">Ambient Weather</a></p>
-    </div>
-  </section>
-
-  <div class="moon-divider" aria-hidden="true">☽ ☾ ☽</div>
-
-  <section>
-    <h2>Instruments of Translation</h2>
-    <p class="section-sub">Unit calculators, for whichever system you read in. Thanks to my wonderful German friend Barbara for suggesting it!</p>
-
-    <div class="converter-grid">
-
-      <div class="converter-card">
-        <h3>Temperature</h3>
-        <div class="converter-row">
-          <div class="field">
-            <label for="fTemp">Fahrenheit</label>
-            <input name="fTemp" id="fTemp" type="text" inputmode="decimal" />
-          </div>
-          <button type="button" class="convert-btn" onclick="convertToC();return false">→ Celsius</button>
-        </div>
-        <div class="converter-row">
-          <div class="field">
-            <label for="cTemp">Celsius</label>
-            <input name="cTemp" id="cTemp" type="text" inputmode="decimal" />
-          </div>
-          <button type="button" class="convert-btn" onclick="convertToF();return false">→ Fahrenheit</button>
-        </div>
-      </div>
-
-      <div class="converter-card">
-        <h3>Wind Speed</h3>
-        <div class="converter-row">
-          <div class="field">
-            <label for="mSpeed">Miles / hour</label>
-            <input name="mSpeed" id="mSpeed" type="text" inputmode="decimal" />
-          </div>
-          <button type="button" class="convert-btn" onclick="convertToK();return false">→ km/h</button>
-        </div>
-        <div class="converter-row">
-          <div class="field">
-            <label for="kSpeed">Kilometers / hour</label>
-            <input name="kSpeed" id="kSpeed" type="text" inputmode="decimal" />
-          </div>
-          <button type="button" class="convert-btn" onclick="convertToM();return false">→ mph</button>
-        </div>
-      </div>
-
-      <div class="converter-card">
-        <h3>Wind Speed (Nautical)</h3>
-        <div class="converter-row">
-          <div class="field">
-            <label for="mkSpeed">Miles / hour</label>
-            <input name="mkSpeed" id="mkSpeed" type="text" inputmode="decimal" />
-          </div>
-          <button type="button" class="convert-btn" onclick="convertToKn();return false">→ Knots</button>
-        </div>
-        <div class="converter-row">
-          <div class="field">
-            <label for="knSpeed">Knots</label>
-            <input name="knSpeed" id="knSpeed" type="text" inputmode="decimal" />
-          </div>
-          <button type="button" class="convert-btn" onclick="convertToMk();return false">→ mph</button>
-        </div>
-      </div>
-
-      <div class="converter-card">
-        <h3>Precipitation / Length</h3>
-        <div class="converter-row">
-          <div class="field">
-            <label for="in">Inches</label>
-            <input name="inl" id="in" type="text" inputmode="decimal" />
-          </div>
-          <button type="button" class="convert-btn" onclick="convertToCm();return false">→ cm</button>
-        </div>
-        <div class="converter-row">
-          <div class="field">
-            <label for="cm">Centimeters</label>
-            <input name="cm" id="cm" type="text" inputmode="decimal" />
-          </div>
-          <button type="button" class="convert-btn" onclick="convertToIn();return false">→ in</button>
-        </div>
-      </div>
-
-      <div class="converter-card">
-        <h3>Barometric Pressure</h3>
-        <div class="converter-row">
-          <div class="field">
-            <label for="hgPres">inHg</label>
-            <input name="hgPres" id="hgPres" type="text" inputmode="decimal" />
-          </div>
-          <button type="button" class="convert-btn" onclick="convertToB();return false">→ Bars</button>
-        </div>
-        <div class="converter-row">
-          <div class="field">
-            <label for="bPres">Bars</label>
-            <input name="bPres" id="bPres" type="text" inputmode="decimal" />
-          </div>
-          <button type="button" class="convert-btn" onclick="convertToHg();return false">→ inHg</button>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="moon-divider" aria-hidden="true">☽ ☾ ☽</div>
-  <p>Reading the sky, one front yard at a time.</p>
-  <p class="contact">Questions? Concerns? Suggestions? Broken links? Incorrect info? Just want to chat about the
-  weather? <a href="mailto:seanchailleach@theweatherwitch.com">Email the Seanchailleach</a>.</p>
-</footer>
-
-<script src="nav.js" defer></script>
-<script>
-  function convertToC() {
-    var fTempVal = parseFloat(document.getElementById('fTemp').value);
-    var cTempVal = (fTempVal - 32) * (5 / 9);
-    document.getElementById('cTemp').value = round2(cTempVal);
-    return false;
-  }
-  function convertToF() {
-    var cTempVal = parseFloat(document.getElementById('cTemp').value);
-    var fTempVal = (cTempVal * (9 / 5)) + 32;
-    document.getElementById('fTemp').value = round2(fTempVal);
-    return false;
-  }
-
-  function convertToK() {
-    var mSpeedVal = parseFloat(document.getElementById('mSpeed').value);
-    var kSpeedVal = (mSpeedVal * 1.6);
-    document.getElementById('kSpeed').value = round2(kSpeedVal);
-    return false;
-  }
-  function convertToM() {
-    var kSpeedVal = parseFloat(document.getElementById('kSpeed').value);
-    var mSpeedVal = (kSpeedVal / 1.6);
-    document.getElementById('mSpeed').value = round2(mSpeedVal);
-    return false;
-  }
-
-  function convertToKn() {
-    var mkSpeedVal = parseFloat(document.getElementById('mkSpeed').value);
-    var knSpeedVal = (mkSpeedVal * 0.8689762419);
-    document.getElementById('knSpeed').value = round2(knSpeedVal);
-    return false;
-  }
-  function convertToMk() {
-    var knSpeedVal = parseFloat(document.getElementById('knSpeed').value);
-    var mkSpeedVal = (knSpeedVal / 0.8689762419);
-    document.getElementById('mkSpeed').value = round2(mkSpeedVal);
-    return false;
-  }
-
-  function convertToCm() {
-    var inVal = parseFloat(document.getElementById('in').value);
-    var cmVal = (inVal * 2.54);
-    document.getElementById('cm').value = round2(cmVal);
-    return false;
-  }
-  function convertToIn() {
-    var cmVal = parseFloat(document.getElementById('cm').value);
-    var inVal = (cmVal * 0.3937007874);
-    document.getElementById('in').value = round2(inVal);
-    return false;
-  }
-
-  function convertToB() {
-    var hgPresVal = parseFloat(document.getElementById('hgPres').value);
-    var bPresVal = (hgPresVal * 0.0339);
-    document.getElementById('bPres').value = round2(bPresVal);
-    return false;
-  }
-  function convertToHg() {
-    var bPresVal = parseFloat(document.getElementById('bPres').value);
-    var hgPresVal = (bPresVal * 29.52998);
-    document.getElementById('hgPres').value = round2(hgPresVal);
-    return false;
-  }
-
-  function round2(n) {
-    return isNaN(n) ? '' : Math.round(n * 100) / 100;
-  }
-</script>
-
 </body>
 </html>

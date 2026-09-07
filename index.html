@@ -70,6 +70,16 @@
     </div>
   </div>
 
+  <!-- WEIGHT LOSS PROGRESS -->
+  <div style="background:#EFE9DC; padding:64px 0;">
+    <div class="page-section" style="display:flex; flex-direction:column; align-items:center; gap:20px; max-width:640px; margin:0 auto; padding:0 64px;">
+      <h2 style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:28px; margin:0; color:#2A2420;">My Progress</h2>
+      <div style="width:100%; background:#F6F1E9; border:1px solid #DDD3C4; border-radius:10px; padding:32px 36px;">
+        <div id="weight-progress-content"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- FROM THE JOURNAL -->
   <div style="background:#EFE9DC; padding:72px 0;">
     <div class="page-section" style="max-width:1200px; margin:0 auto; padding:0 64px; display:flex; flex-direction:column; align-items:center; gap:32px;">
@@ -116,5 +126,41 @@
   </div>
 
 </div>
+
+<!-- WEIGHT LOSS PROGRESS DATA -->
+<!-- To update: change currentWeight and currentDateLabel below, save, and republish. -->
+<script>
+  var WEIGHT_DATA = {
+    startWeight: 232,
+    startLabel: "March 2026",
+    goalWeight: 110,
+    currentWeight: 194.4,
+    currentDateLabel: "September 7, 2026",
+    heightLabel: "5′ 3″"
+  };
+  (function() {
+    var d = WEIGHT_DATA;
+    var lost = d.startWeight - d.currentWeight;
+    var toGo = d.currentWeight - d.goalWeight;
+    var totalToLose = d.startWeight - d.goalWeight;
+    var pct = Math.max(0, Math.min(100, (lost / totalToLose) * 100));
+
+    var container = document.getElementById('weight-progress-content');
+    if (!container) return;
+
+    container.innerHTML =
+      '<div style="font-size:14px; color:#8C6A46; margin-bottom:6px;">As of ' + d.currentDateLabel + ' &middot; Height: ' + d.heightLabel + '</div>' +
+      '<div style="font-family:\'Newsreader\',Georgia,serif; font-size:42px; font-weight:500; color:#2A2420; margin-bottom:6px;">' + lost.toFixed(1) + ' lbs lost</div>' +
+      '<div style="font-size:15px; color:#5B5349; margin-bottom:22px;">' + toGo.toFixed(1) + ' lbs to go &mdash; ' + pct.toFixed(0) + '% of the way to my goal</div>' +
+      '<div role="progressbar" aria-valuenow="' + pct.toFixed(0) + '" aria-valuemin="0" aria-valuemax="100" aria-label="Progress toward goal weight" style="width:100%; height:14px; background:#EFE9DC; border:1px solid #DDD3C4; border-radius:7px; overflow:hidden;">' +
+        '<div style="width:' + pct + '%; height:100%; background:#BB5A38; border-radius:7px 0 0 7px;"></div>' +
+      '</div>' +
+      '<div style="display:flex; justify-content:space-between; align-items:flex-start; font-size:13px; color:#8C6A46; margin-top:10px;">' +
+        '<span style="text-align:left;">Start: ' + d.startWeight + ' lbs<br>' + d.startLabel + '</span>' +
+        '<span style="text-align:right;">Goal: ' + d.goalWeight + ' lbs</span>' +
+      '</div>';
+  })();
+</script>
+
 </body>
 </html>

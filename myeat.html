@@ -13,6 +13,12 @@
     .home-link:hover { color: #BB5A38; border-bottom-color: #BB5A38 !important; }
     .nav-link { color: #2A2420; text-decoration: none; }
     .nav-link:hover { color: #BB5A38; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > .nav-link { cursor: pointer; }
+    .nav-dropdown-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #F6F1E9; border: 1px solid #DDD3C4; border-radius: 8px; padding: 8px 0; min-width: 190px; box-shadow: 0 8px 24px rgba(42,36,32,0.12); z-index: 10; }
+    .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown:focus-within .nav-dropdown-menu { display: block; }
+    .nav-dropdown-link { display: block; padding: 9px 20px; font-size: 14px; font-weight: 500; color: #2A2420; text-decoration: none; white-space: nowrap; text-align: left; }
+    .nav-dropdown-link:hover { color: #BB5A38; background: #EFE9DC; }
 
     @media (max-width: 720px) {
       .site-header { flex-direction: column; align-items: center !important; gap: 18px; }
@@ -29,7 +35,15 @@
   <div class="site-header" style="display:flex; align-items:center; justify-content:space-between; padding:26px 64px; max-width:1200px; margin:0 auto;">
     <a class="home-link" href="index.html" style="font-family:'Newsreader',Georgia,serif; font-style:italic; font-size:26px; font-weight:500;">Rooted Strength</a>
     <div class="site-nav" style="display:flex; align-items:center; gap:36px;">
-      <a class="nav-link" href="myeat.html" style="font-size:15px; font-weight:500;">Recipes</a>
+      <div class="nav-dropdown">
+        <a class="nav-link" href="myeat.html" style="font-size:15px; font-weight:500;">Recipes</a>
+        <div class="nav-dropdown-menu">
+          <a class="nav-dropdown-link" href="myeat.html">Why I Eat This Way</a>
+          <a class="nav-dropdown-link" href="staples.html">Staples</a>
+          <a class="nav-dropdown-link" href="lentilchili.html">Fast and Easy Lentil Chili</a>
+          <a class="nav-dropdown-link" href="overnightoats.html">Overnight Oats</a>
+        </div>
+      </div>
       <a class="nav-link" href="brutestrength.html" style="font-size:15px; font-weight:500;">Training</a>
       <a class="nav-link" href="journey.html" style="font-size:15px; font-weight:500;">Journal</a>
       <a class="nav-link" href="index.html#about-me" style="font-size:15px; font-weight:500;">About</a>

@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Batching for Busy Weeks &mdash; Rooted Strength</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .home-link { color: #2A2420; text-decoration: none; }
+    .home-link:hover { color: #BB5A38; border-bottom-color: #BB5A38 !important; }
+    .nav-link { color: #2A2420; text-decoration: none; }
+    .nav-link:hover { color: #BB5A38; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > .nav-link { cursor: pointer; }
+    .nav-dropdown-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #F6F1E9; border: 1px solid #DDD3C4; border-radius: 8px; padding: 8px 0; min-width: 190px; box-shadow: 0 8px 24px rgba(42,36,32,0.12); z-index: 10; }
+    .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown:focus-within .nav-dropdown-menu { display: block; }
+    .nav-dropdown-link { display: block; padding: 9px 20px; font-size: 14px; font-weight: 500; color: #2A2420; text-decoration: none; white-space: nowrap; text-align: left; }
+    .nav-dropdown-link:hover { color: #BB5A38; background: #EFE9DC; }
+    .recipe-list { text-align: left; margin: 0; padding-left: 22px; }
+    .recipe-list li { margin-bottom: 8px; }
+    .batch-link { color: #BB5A38; text-decoration: none; border-bottom: 1px solid #DDD3C4; }
+    .batch-link:hover { border-bottom-color: #BB5A38; }
+
+    @media (max-width: 720px) {
+      .site-header { flex-direction: column; align-items: center !important; gap: 18px; }
+      .site-nav { flex-wrap: wrap; gap: 18px !important; justify-content: center !important; }
+      .page-section, .site-header { padding-left: 28px !important; padding-right: 28px !important; }
+    }
+  </style>
+</head>
+<body>
+
+<div style="background:#F6F1E9; color:#2A2420; font-family:'Archivo',-apple-system,BlinkMacSystemFont,sans-serif; width:100%; min-height:100%; text-align:center;">
+
+  <!-- HEADER -->
+  <div class="site-header" style="display:flex; align-items:center; justify-content:space-between; padding:26px 64px; max-width:1200px; margin:0 auto;">
+    <a class="home-link" href="index.html" style="font-family:'Newsreader',Georgia,serif; font-style:italic; font-size:26px; font-weight:500;">Rooted Strength</a>
+    <div class="site-nav" style="display:flex; align-items:center; gap:36px;">
+      <div class="nav-dropdown">
+        <a class="nav-link" href="myeat.html" style="font-size:15px; font-weight:500;">Recipes</a>
+        <div class="nav-dropdown-menu">
+          <a class="nav-dropdown-link" href="myeat.html">Why I Eat This Way</a>
+          <a class="nav-dropdown-link" href="staples.html">Staples</a>
+          <a class="nav-dropdown-link" href="batch.html">Batching for Busy Weeks</a>
+          <a class="nav-dropdown-link" href="lentilchili.html">Fast and Easy Lentil Chili</a>
+          <a class="nav-dropdown-link" href="overnightoats.html">Overnight Oats</a>
+        </div>
+      </div>
+      <a class="nav-link" href="brutestrength.html" style="font-size:15px; font-weight:500;">Training</a>
+      <a class="nav-link" href="journey.html" style="font-size:15px; font-weight:500;">Journal</a>
+      <a class="nav-link" href="index.html#about-me" style="font-size:15px; font-weight:500;">About</a>
+    </div>
+  </div>
+
+  <!-- PAGE TITLE -->
+  <div style="padding:32px 0 8px;">
+    <div class="page-section" style="display:flex; flex-direction:column; align-items:center; gap:14px; max-width:760px; margin:0 auto; padding:0 64px;">
+      <div style="font-size:13px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8C6A46;">Meal Prep</div>
+      <h1 style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:38px; line-height:1.2; margin:0; color:#2A2420;">Batching for Busy Weeks</h1>
+      <p style="font-size:18px; line-height:1.6; color:#5B5349; margin:0;">A few hours on the weekend buys me a whole week of easy, no-excuses meals.</p>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <div style="padding:40px 0 56px;">
+    <div class="page-section" style="display:flex; flex-direction:column; align-items:center; gap:14px; max-width:760px; margin:0 auto; padding:0 64px;">
+      <p style="font-size:16px; line-height:1.7; color:#4A4339; margin:0;">Cook ahead, meal prep, batching&mdash;whatever you call it, having a fridge full of ready-to-go nourishment is essential for those of us with busy schedules. How many times have you just been too busy or too tired to cook, and ended up with high-calorie takeout, or mindlessly snacking on junk food? For me, more times than I can count.</p>
+      <p style="font-size:16px; line-height:1.7; color:#4A4339; margin:0;">There are two schools of thought when it comes to batching: batching meals, and batching ingredients. I mostly batch ingredients, with a few batched meals thrown in here and there. You have more options with ingredients, mixing and matching a little differently every day, adjusting as needed for fiber or protein goals. And although this is a quick option for a busy weeknight, having a few complete meals ready to go is even faster and easier.</p>
+      <p style="font-size:16px; line-height:1.7; color:#4A4339; margin:0;">If you batch, for example, a huge pot of chili&mdash;enough for a week&mdash;then your options are to eat chili every day (before it goes bad), or freeze several portions. Unfortunately, I don't have much freezer space, so when I batch meals I only batch a few portions&mdash;enough to store in the fridge and eat within the week. Of course, if you have room to freeze four out of your seven portions of chili, you're ahead of the game!</p>
+      <p style="font-size:16px; line-height:1.7; color:#4A4339; margin:0;">I usually do my batching on the weekends, so I can grab a quick breakfast or lunch during work (I work from home). It takes maybe a few hours to have food ready to go all week long.</p>
+    </div>
+  </div>
+
+  <!-- INGREDIENTS -->
+  <div style="background:#EFE9DC; padding:56px 0;">
+    <div class="page-section" style="display:flex; flex-direction:column; align-items:center; gap:40px; max-width:760px; margin:0 auto; padding:0 64px;">
+
+      <div style="display:flex; flex-direction:column; align-items:center; gap:20px; width:100%;">
+        <h2 style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:28px; margin:0; color:#2A2420;">Ingredients</h2>
+
+        <div style="display:flex; flex-direction:column; align-items:center; gap:14px; width:100%;">
+          <p style="font-size:16px; line-height:1.7; color:#4A4339; margin:0; align-self:flex-start;">These are the standards upon which I build my meals every week:</p>
+          <ul class="recipe-list" style="font-size:16px; line-height:1.7; color:#4A4339; width:100%;">
+            <li>Lentils</li>
+            <li>Beans (I switch it up each week among black beans, red beans, chickpeas, pintos, etc.)</li>
+            <li>Quinoa</li>
+            <li>Air fried tofu</li>
+            <li>Veggies (I buy frozen and cook a few portions at a time to store in the fridge)</li>
+            <li>Abbot's Chick'n (comes frozen; I air fry a box at a time to store in the fridge)</li>
+          </ul>
+        </div>
+
+        <div style="display:flex; flex-direction:column; align-items:center; gap:14px; width:100%;">
+          <p style="font-size:16px; line-height:1.7; color:#4A4339; margin:0; align-self:flex-start;">I prep these whenever I'm jonesing for them:</p>
+          <ul class="recipe-list" style="font-size:16px; line-height:1.7; color:#4A4339; width:100%;">
+            <li>Tempeh</li>
+            <li>Soy curls</li>
+            <li>Vegan burgers (I air fry a few to store in the fridge for a quick microwave during the week)</li>
+            <li>High-protein pasta</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEALS -->
+  <div style="padding:56px 0;">
+    <div class="page-section" style="display:flex; flex-direction:column; align-items:center; gap:40px; max-width:760px; margin:0 auto; padding:0 64px;">
+
+      <div style="display:flex; flex-direction:column; align-items:center; gap:20px; width:100%;">
+        <h2 style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:28px; margin:0; color:#2A2420;">Meals</h2>
+
+        <div style="display:flex; flex-direction:column; align-items:center; gap:14px; width:100%;">
+          <p style="font-size:16px; line-height:1.7; color:#4A4339; margin:0; align-self:flex-start;">Weekly:</p>
+          <ul class="recipe-list" style="font-size:16px; line-height:1.7; color:#4A4339; width:100%;">
+            <li>Scrambled tofu</li>
+            <li>Overnight oats</li>
+          </ul>
+        </div>
+
+        <div style="display:flex; flex-direction:column; align-items:center; gap:14px; width:100%;">
+          <p style="font-size:16px; line-height:1.7; color:#4A4339; margin:0; align-self:flex-start;">These are usually for cold weather:</p>
+          <ul class="recipe-list" style="font-size:16px; line-height:1.7; color:#4A4339; width:100%;">
+            <li>Lentil veggie soup</li>
+            <li>Curried lentil soup</li>
+            <li>Easy peasy lentil chili</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BACK TO HOME -->
+  <div style="padding:0 0 8px;">
+    <a class="home-link" href="index.html" style="display:inline-block; font-size:14px; border-bottom:1px solid #DDD3C4;">&larr; Back to Home</a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="page-section" style="padding:48px 64px;">
+    <div class="footer-row" style="max-width:1200px; margin:0 auto; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:24px; border-top:1px solid #DDD3C4; padding-top:32px;">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
+        <div style="font-family:'Newsreader',Georgia,serif; font-style:italic; font-size:19px; color:#2A2420;">Rooted Strength</div>
+        <div style="font-size:13px; color:#8C6A46;">Plant-based, joint-conscious, training for strength.</div>
+      </div>
+      <div style="font-size:13px; color:#8C6A46;">&copy; 2026 Rooted Strength</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    a { color: #BB5A38; text-decoration: none; }
+    a:hover { color: #8f4227; }
+    .nav-link { color: #2A2420; }
+    .nav-link:hover { color: #BB5A38; }
+    .post-link { color: #2A2420; border-bottom: 1px solid #DDD3C4; }
+    .post-link:hover { color: #BB5A38; border-bottom-color: #BB5A38; }
+
+    @media (max-width: 960px) {
+      .hero-row { flex-direction: column; padding-bottom: 56px !important; }
+      .hero-visual { flex: 0 0 auto !important; width: 100%; }
+      .hero-visual > div { width: 100% !important; height: 280px !important; }
+    }
+
+    @media (max-width: 720px) {
+      .site-header { flex-direction: column; align-items: flex-start !important; gap: 18px; }
+      .site-nav { flex-wrap: wrap; gap: 18px !important; }
+      .hero-heading { font-size: 34px !important; }
+      .pillars-grid { grid-template-columns: 1fr !important; }
+      .featured-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+      .footer-row { flex-direction: column; align-items: flex-start !important; gap: 20px !important; }
+      .page-section, .site-header, .hero-row { padding-left: 28px !important; padding-right: 28px !important; }
+    }
+  </style>
+</helmet>
+
+<div style="background:#F6F1E9; color:#2A2420; font-family:'Archivo',-apple-system,BlinkMacSystemFont,sans-serif; width:100%; min-height:100%;">
+
+  <!-- HEADER -->
+  <div class="site-header" style="display:flex; align-items:center; justify-content:space-between; padding:26px 64px; max-width:1200px; margin:0 auto;">
+    <div style="font-family:'Newsreader',Georgia,serif; font-style:italic; font-size:26px; font-weight:500; color:#2A2420;">Rooted Strength</div>
+    <div class="site-nav" style="display:flex; align-items:center; gap:36px;">
+      <a class="nav-link" href="#" style="font-size:15px; font-weight:500;">Recipes</a>
+      <a class="nav-link" href="#" style="font-size:15px; font-weight:500;">Training</a>
+      <a class="nav-link" href="#" style="font-size:15px; font-weight:500;">Journal</a>
+      <a class="nav-link" href="#" style="font-size:15px; font-weight:500;">About</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero-row" style="display:flex; align-items:center; gap:64px; max-width:1200px; margin:0 auto; padding:48px 64px 80px;">
+    <div style="flex:1 1 0; display:flex; flex-direction:column; gap:22px; min-width:0;">
+      <div style="font-size:13px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8C6A46;">Vegan &middot; Strength Training &middot; No Age Limit</div>
+      <h1 class="hero-heading" style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:52px; line-height:1.12; margin:0; color:#2A2420;">Strong on plants.<br>Training for strength, <span style="font-style:italic;">not size.</span></h1>
+      <p style="font-size:18px; line-height:1.6; color:#5B5349; max-width:480px; margin:0;">Recipes built to hit real protein targets, and programming for lifters returning to training later in life &mdash; joint-conscious, no hype, no shortcuts.</p>
+      <div style="display:flex; gap:16px; margin-top:8px;">
+        <a href="#" style="background:{{accent}}; color:#F6F1E9; padding:14px 26px; border-radius:3px; font-size:15px; font-weight:600;">Browse Recipes</a>
+        <a href="#" style="border:1.5px solid #2A2420; color:#2A2420; padding:14px 26px; border-radius:3px; font-size:15px; font-weight:600;">See the Training Log</a>
+      </div>
+    </div>
+    <div class="hero-visual" style="flex:0 0 420px; display:flex; align-items:center; justify-content:center;">
+      <div style="position:relative; width:420px; height:420px; background:#EDE7D8; border-radius:24px; display:flex; align-items:center; justify-content:center;">
+        <svg width="250" height="288" viewBox="0 0 200 230" fill="none">
+          <!-- canopy -->
+          <path d="M100 40 C78 38 62 55 65 72 C48 78 46 100 65 108 C72 122 92 126 100 122 C108 126 128 122 135 108 C154 100 152 78 135 72 C138 55 122 38 100 40 Z"
+                stroke="#2A2420" stroke-width="2" stroke-linejoin="round"/>
+          <!-- apples -->
+          <g fill="{{accent}}">
+            <circle cx="78" cy="63" r="4.5"/>
+            <circle cx="119" cy="60" r="4.5"/>
+            <circle cx="95" cy="92" r="4.5"/>
+            <circle cx="127" cy="96" r="4.5"/>
+            <circle cx="63" cy="90" r="4.5"/>
+          </g>
+          <!-- trunk -->
+          <line x1="100" y1="140" x2="100" y2="88" stroke="#2A2420" stroke-width="6" stroke-linecap="round"/>
+          <!-- ground line -->
+          <line x1="14" y1="140" x2="186" y2="140" stroke="#C9BFAE" stroke-width="1.5" stroke-dasharray="1 5" stroke-linecap="round"/>
+          <!-- roots -->
+          <g stroke="#2A2420" stroke-linecap="round" fill="none">
+            <path d="M100 140 C98 162 100 180 100 198" stroke-width="3.5"/>
+            <path d="M100 142 C93 155 79 160 64 179" stroke-width="4"/>
+            <path d="M88 159 C81 169 73 173 66 187" stroke-width="2.2"/>
+            <path d="M100 142 C107 155 121 160 136 179" stroke-width="4"/>
+            <path d="M112 159 C119 169 127 173 134 187" stroke-width="2.2"/>
+            <path d="M100 145 C91 152 86 168 80 197" stroke-width="2"/>
+            <path d="M100 145 C109 152 114 168 120 197" stroke-width="2"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT ME -->
+  <div style="background:#EFE9DC; padding:64px 0;">
+    <div class="page-section" style="display:flex; flex-direction:column; gap:14px; max-width:760px; margin:0 auto; padding:0 64px;">
+      <h2 style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:28px; margin:0; color:#2A2420;">About Me</h2>
+      <p style="font-size:16px; line-height:1.7; color:#4A4339; margin:0;">Hello, fellow vegans and/or lifters! I'm Suzy, aka The Vegan Mimi, and I've been lifting on and off (sadly, mostly &ldquo;off&rdquo;) since high school. I've picked it back up again over the past few years, to strengthen my legs for knee replacement surgery. Most recently, as of the date of creation of this site (August 2026), I've returned with a renewed purpose. Strong legs isn't enough; I'm working on overall body strength.</p>
+      <p style="font-size:16px; line-height:1.7; color:#4A4339; margin:0;">You see, I don't care about bulk, or toning, or &ldquo;getting cut&rdquo; &mdash; I'm focusing on sheer, brute strength. I don't let the fact that I'm <span style="font-style:italic;">ahem</span> getting on in years deter me from showing up at the gym and giving it my all. But, because I'm still healing from two surgeries and getting used to two new knees, I have to be more aware of my limitations (neither of my knees will ever again have full flexion).</p>
+      <p style="font-size:16px; line-height:1.7; color:#4A4339; margin:0;">I became a vegetarian in 1980, and fully vegan in 2011. Although the underlying reason has always been animal welfare, I have to admit that the health benefits have been the <span style="font-style:italic;">lagniappe</span>. Hypercholesterolemia runs in my family, and I've been able to avoid it through my diet. The routine labs drawn before each of my knee replacements showed excellent metabolic health, and my EKGs were normal.</p>
+    </div>
+  </div>
+
+  <!-- CONTENT PILLARS -->
+  <div class="page-section" style="max-width:1200px; margin:0 auto; padding:72px 64px;">
+    <div class="pillars-grid" style="display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:40px;">
+
+      <div style="display:flex; flex-direction:column; gap:16px; padding:36px; border:1px solid #DDD3C4; border-radius:10px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B7A3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2c-4 4-8 8-8 13a8 8 0 0 0 16 0c0-5-4-9-8-13z"/>
+          <path d="M12 6v14"/>
+        </svg>
+        <h3 style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:22px; margin:0; color:#2A2420;">High-Protein, Fully Plant-Based</h3>
+        <p style="font-size:15px; line-height:1.6; color:#5B5349; margin:0;">Meals built around real training needs &mdash; quick enough for a weeknight, high enough in protein to actually matter.</p>
+        <div style="display:flex; flex-direction:column; gap:10px; margin-top:8px;">
+          <a class="post-link" href="#" style="font-size:14px; padding-bottom:6px; width:fit-content;">The Post-Lift Bowl &mdash; 34g Protein, 15 Minutes</a>
+          <a class="post-link" href="#" style="font-size:14px; padding-bottom:6px; width:fit-content;">Hitting 100g of Protein Without Touching Tofu Twice</a>
+          <a class="post-link" href="#" style="font-size:14px; padding-bottom:6px; width:fit-content;">Five High-Protein Snacks for Training Days</a>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:16px; padding:36px; border:1px solid #DDD3C4; border-radius:10px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <rect x="1.2" y="9" width="2.8" height="6" rx="0.8"/>
+          <rect x="20" y="9" width="2.8" height="6" rx="0.8"/>
+          <rect x="5.8" y="7.2" width="2.3" height="9.6" rx="0.9"/>
+          <rect x="16" y="7.2" width="2.3" height="9.6" rx="0.9"/>
+        </svg>
+        <h3 style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:22px; margin:0; color:#2A2420;">Strength Training, No Age Limit</h3>
+        <p style="font-size:15px; line-height:1.6; color:#5B5349; margin:0;">Programming for lifters returning after time off, training for strength over size, with equipment choices that respect real joints.</p>
+        <div style="display:flex; flex-direction:column; gap:10px; margin-top:8px;">
+          <a class="post-link" href="#" style="font-size:14px; padding-bottom:6px; width:fit-content;">Returning to the Barbell After a Long Break</a>
+          <a class="post-link" href="#" style="font-size:14px; padding-bottom:6px; width:fit-content;">Why I Swapped Overhead Presses for the Machine</a>
+          <a class="post-link" href="#" style="font-size:14px; padding-bottom:6px; width:fit-content;">Three Days a Week Is Enough &mdash; Here's the Program</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FEATURED POSTS -->
+  <div style="background:#EFE9DC; padding:72px 0;">
+    <div class="page-section" style="max-width:1200px; margin:0 auto; padding:0 64px; display:flex; flex-direction:column; gap:32px;">
+      <h2 style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:26px; margin:0; color:#2A2420;">From the Journal</h2>
+      <div class="featured-grid" style="display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:32px;">
+
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:{{accent}};">Training</div>
+          <h4 style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:19px; margin:0; color:#2A2420; line-height:1.35;">Training for Strength After 60: What Actually Changes</h4>
+          <p style="font-size:14px; line-height:1.55; color:#5B5349; margin:0;">It's not about doing less. It's about doing the right things, in the right order.</p>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#6B7A3A;">Recipes</div>
+          <h4 style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:19px; margin:0; color:#2A2420; line-height:1.35;">The Lentil-Walnut Bowl That Replaced My Protein Shake</h4>
+          <p style="font-size:14px; line-height:1.55; color:#5B5349; margin:0;">28 grams of protein, no powder, no soy.</p>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:{{accent}};">Journal</div>
+          <h4 style="font-family:'Newsreader',Georgia,serif; font-weight:500; font-size:19px; margin:0; color:#2A2420; line-height:1.35;">What I Got Wrong My First Month Back</h4>
+          <p style="font-size:14px; line-height:1.55; color:#5B5349; margin:0;">A few honest notes on returning to lifting later in life.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="page-section" style="padding:48px 64px;">
+    <div class="footer-row" style="max-width:1200px; margin:0 auto; display:flex; align-items:flex-start; justify-content:space-between; gap:32px; border-top:1px solid #DDD3C4; padding-top:32px;">
+      <div style="display:flex; flex-direction:column; gap:6px;">
+        <div style="font-family:'Newsreader',Georgia,serif; font-style:italic; font-size:19px; color:#2A2420;">Rooted Strength</div>
+        <div style="font-size:13px; color:#8C6A46;">Plant-based, joint-conscious, training for strength.</div>
+      </div>
+      <div style="display:flex; gap:28px;">
+        <a class="nav-link" href="#" style="font-size:14px;">Recipes</a>
+        <a class="nav-link" href="#" style="font-size:14px;">Training</a>
+        <a class="nav-link" href="#" style="font-size:14px;">Journal</a>
+        <a class="nav-link" href="#" style="font-size:14px;">About</a>
+      </div>
+      <div style="font-size:13px; color:#8C6A46;">&copy; 2026 Rooted Strength</div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#BB5A38","options":["#BB5A38","#6B7A3A","#8C6A46","#7A4A6B"]}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      accent: this.props.accent ?? '#BB5A38'
+    };
+  }
+}
+</script>
+</body>
+</html>
